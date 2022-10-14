@@ -15,7 +15,7 @@ using namespace std;
 
 typedef struct Point_
 {
-    float x, y, z;  // X, Y, Z position
+    float x, y;  // X, Y position
     int clusterID;  // clustered ID
 }Point;
 

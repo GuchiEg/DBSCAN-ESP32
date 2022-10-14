@@ -13,13 +13,14 @@ void readBenchmarkData(vector<Point>& points)
 
     unsigned int minpts, num_points, cluster, i = 0;
     double epsilon;
+    float z;
     fscanf(stream, "%u\n", &num_points);
 
     Point *p = (Point *)calloc(num_points, sizeof(Point));
 
     while (i < num_points)
     {
-          fscanf(stream, "%f,%f,%f,%d\n", &(p[i].x), &(p[i].y), &(p[i].z), &cluster);
+          fscanf(stream, "%f,%f,%f,%d\n", &(p[i].x), &(p[i].y), &(z), &cluster);
           p[i].clusterID = UNCLASSIFIED;
           points.push_back(p[i]);
           ++i;
@@ -40,7 +41,7 @@ void printResults(vector<Point>& points, int num_points)
     {
           printf("%5.2lf %5.2lf %5.2lf: %d\n",
                  points[i].x,
-                 points[i].y, points[i].z,
+                 points[i].y, 0,
                  points[i].clusterID);
           ++i;
     }
