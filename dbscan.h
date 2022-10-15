@@ -15,8 +15,12 @@ using namespace std;
 
 typedef struct Point_
 {
-    float x, y;  // X, Y position
-    int clusterID;  // clustered ID
+    // X, Y position
+    float x, y;
+    // clustered ID
+    int clusterID;
+    // euclidean distance to point from origin
+    float dist;
 }Point;
 
 class DBSCAN {

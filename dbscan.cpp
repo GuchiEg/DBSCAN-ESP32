@@ -10,12 +10,13 @@ int DBSCAN::run()
         {
             if ( expandCluster(*iter, clusterID) != FAILURE )
             {
+                
                 clusterID += 1;
             }
         }
     }
 
-    return 0;
+    return clusterID - 1;
 }
 
 int DBSCAN::expandCluster(Point point, int clusterID)
